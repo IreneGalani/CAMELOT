@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Narration
+comment1.params=
+comment1.target=Narration()
+comment2.params=playing
+comment2.target=void\ setPlaying(boolean)
+comment3.params=finished
+comment3.target=void\ setFinished(boolean)
+numComments=4

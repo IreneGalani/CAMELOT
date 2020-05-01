@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Rating
+comment1.params=stars\ comment
+comment1.target=Rating(int,\ java.lang.String)
+comment2.params=hasCommented
+comment2.target=void\ HasCommented(boolean)
+numComments=3
