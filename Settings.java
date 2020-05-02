@@ -22,15 +22,15 @@ public class Settings {
 		return Lang_Chosen;
 	}
 	
-	public boolean setIs_On( boolean Io){
+	public void setIs_On( boolean Io){
 		 Is_on = Io;
 	}
 	
-	public int setVolume(int v){
+	public void setVolume(int v){
 		 Volume = v;
 	}
 	
-	public String getLang(String Lang){
+	public void getLang(String Lang){
 		 Lang_Chosen = Lang;
 	}
 
