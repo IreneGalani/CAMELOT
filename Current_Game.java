@@ -21,11 +21,11 @@ public int getroleAssigned(){
 	return rolesAssigned;
 }
 
-public int setnumPlayers(int num){
+public void setnumPlayers(int num){
 	numPlayers = num;
 }
 
-public int setrolesAssigned(int rolesA){
+public void setrolesAssigned(int rolesA){
 	rolesAssigned = rolesA;
 }
 
