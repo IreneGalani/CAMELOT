@@ -18,10 +18,10 @@ public class Special_Rules {
 		return name;
 	}
 	
-	public boolean setIsOn(boolean Io){
+	public void setIsOn(boolean Io){
 		IsOn = Io;
 	}
-	public String setname( String n){
+	public void setname( String n){
 		name = n;
 	}
 }
