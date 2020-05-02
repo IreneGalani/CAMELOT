@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Role
-comment1.params=roleName\ side
-comment1.target=Role(java.lang.String,\ java.lang.String)
-comment2.params=isUsed
-comment2.target=void\ setIsUsed(boolean)
-comment3.params=given
-comment3.target=void\ setGiven(boolean)
-numComments=4
