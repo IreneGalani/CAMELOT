@@ -14,3 +14,6 @@
 * Ζαρμακούπης Πολύκαρπος
 * Νικολακοπούλου Γεωργία 
 * Τσακηρίδης Μιχάλης
+
+## License & copyright
+Licensed under the [MIT License](LICENSE).
