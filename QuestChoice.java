@@ -9,12 +9,14 @@ public class QuestChoice
 {
     // μεταβλητές στιγμιοτύπου - αντικαταστήστε το ακόλουθο παράδειγμα
     // με τις δικές σας μεταβλητές
-    public int countQuest;
+    private int countQuest;
+    private Player name;
 
     
-    public QuestChoice(int countQuest)
+    public QuestChoice(int countQuest, Player leader_name)
     {
              this.countQuest=0;
+             name= leader_name;
     }
     
     
