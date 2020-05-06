@@ -8,7 +8,7 @@
 public class Quest 
 {
     
-    privete int questNumber;
+    private int questNumber;
     private int missioners;
     private Current_Game players_num;
 
