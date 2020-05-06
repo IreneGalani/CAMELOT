@@ -7,16 +7,18 @@
  */
 public class History{
     
-    public boolean emptyHistory;
-    public boolean saveGame;// save current game?
-    public int savedGames;// #of saved Games
+    private boolean emptyHistory;
+    private boolean saveGame;// save current game?
+    private int savedGames;// #of saved Games
+    private player name;// player's name
     
 
-    public History(int savedGames)
+    public History(int savedGames, player username)
     {
         this.emptyHistory=true;
         this.saveGame=false;
         this.savedGames=0;
+        username=name;
     }
 
     
