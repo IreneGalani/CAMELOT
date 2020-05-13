@@ -28,5 +28,4 @@ public void setnumPlayers(int num){
 public void setrolesAssigned(int rolesA){
 	rolesAssigned = rolesA;
 }
-
 }
