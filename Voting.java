@@ -36,4 +36,23 @@ public class VotingData {
         return this.inFavor > this.against;
     }
     
+    public int checkFailures(){
+        if(checkResult()){
+            if(this.ongoingFailures > 0 && this.ongoingFailures < 5){
+                setToZero();
+            }
+        } else {
+            increaseFailures();
+        }
+        return this.ongoingFailures;
+    }
+    
+     public void setToZero(){
+        ongoingFailures = 0;
+    }
+
+    public void increaseFailures(){
+        ongoingFailures++;
+    }
+    
 }
