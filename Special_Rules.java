@@ -27,7 +27,7 @@ public class Special_Rules {
 	}
 	
 	public boolean checkTargeting(boolean IsOn,String name){
-	   if(IsOn=true)
+	   if(IsOn==true)
 	   {
 	       if (name=="Targeting")
 	        {
