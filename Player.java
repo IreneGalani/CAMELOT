@@ -9,7 +9,7 @@ public class Player {
     public int playerWins;
     public int playerDefeats;
 
-    public Player(String username, boolean isLeader, boolean isLadyOfTheLake) {
+    public Player(String username) {
         this.username = username;
         this.isLeader = false;
         this.isLadyOfTheLake = false;
@@ -21,6 +21,15 @@ public class Player {
         this.playerDefeats = 0;
     }
 
+    
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+    
     public void setLeader(boolean leader) {
         isLeader = leader;
     }
