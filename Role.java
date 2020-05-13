@@ -22,8 +22,17 @@ public class Role
     {
         if(validSpRoles = true)
         {
-            //save objects tou chooseSpRoles() stis metavlites
+            Role merlin = mer;
+            Role pericval = per;
+            Role mordred = mord;
+            Role oberon = obe;
+            Role morgana = morg;
         }
     }
+    public boolean checkRoles()
+    {
+       return isUsed;
+    }
 }
+
 
