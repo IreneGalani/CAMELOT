@@ -47,13 +47,14 @@ public class Settings {
 	}
 
 
-	public void storevolume( Settings s1){
-    	Volume = s1.Volume ;
+	public void storevolume( Settings s1){                      // Methodos gia thn apothikeush ths timhs
+	 Volume = s1.Volume ;                                       // ths entashs afhghshs                            
     	System.out.println("H entash afhghshs einai :" + Volume);
     }
     
-    public void storeaudio(Settings s1){
-    	Is_on_hx = s1.Is_on_hx;
+    public void storeaudio(Settings s1){                                 
+	                                                                  //Methodos gia thn apothikeush an einai energopoihmenos    
+    	Is_on_hx = s1.Is_on_hx;                                           //   h oxi o Hxos polumeswn
     	if (Is_on_hx == true){
     	System.out.println("O hxos polumeswn einai energopoihmenos ");
     	}else {
@@ -61,14 +62,14 @@ public class Settings {
     	}
     }
     
-    public void storeLang(Settings s1){
-    	Lang_Chosen = s1.Lang_Chosen ;
+    public void storeLang(Settings s1){                                                 //Methodos gia thn apothikeush ths
+    	Lang_Chosen = s1.Lang_Chosen ;                                                  // glwssas pou  tha xrhsimopoithei 
     	System.out.println("H Glwssa pou xrhsimopoieitai einai :" + Lang_Chosen);
     	
     }
     
-    public void storeNotific(Settings s1){
-    	Is_on_n = s1.Is_on_n;
+    public void storeNotific(Settings s1){                                              //Methodos gia thn apothikeush an 
+    	Is_on_n = s1.Is_on_n;                                                           // theloume h oxi notifications
     	if (Is_on_n == true){
     	System.out.println("H leitourgia notifications einai energh ");
     	}else {
