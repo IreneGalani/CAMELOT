@@ -6,25 +6,41 @@ public class Special_Rules {
 	private boolean target;// krataei to apotelesma tou elegxou Targeting.
 	
 	public Special_Rules (boolean IsOn, String name){
-		this.IsOn = false;
-		this.name = name ;
+			this.IsOn = IsOn;
+			this.name = name ;
+			
+		}
 		
-	}
-	
-	public boolean getIsOn(){
-		return IsOn;
-	}
-	
-	public String getname(){
-		return name;
-	}
-	
-	public boolean setIsOn(boolean Io){
-		IsOn = Io;
-	}
-	public String setname( String n){
-		name = n;
-	}
+		public boolean getIsOn(){
+			return IsOn;
+		}
+		
+		public String getname(){
+			return name;
+		}
+		
+		public void setIsOn (boolean Io){
+			IsOn = Io;
+		}
+		public void setname ( String n){
+			name = n;
+		}
+		
+		public void storeSpecialrules( Special_Rules sp1){
+		    if (sp1.IsOn == true){
+		    	System.out.println(" O eidikos kanonas " + sp1.name +  " einai energopoihmenos");
+		    	IsOn = true;
+		    }
+		    else {
+		    	System.out.println(" O eidikos kanonas " + sp1.name +  " einai apenergopoihmneos");
+		    	IsOn = false;
+		    }
+			}
+		
+		public boolean getSpecialrules( Special_Rules sp1){
+			return sp1.IsOn;}
+}
+
 	
 	public boolean checkTargeting(boolean IO,String NM){
 	   if(IO=true)
