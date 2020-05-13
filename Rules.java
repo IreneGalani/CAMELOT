@@ -7,7 +7,7 @@ public class Rules
 	
   	public boolean verifyNumPlayers(boolean validNumPlayers)
 	{
-       		if(numPlayers >= 5 && numPlayers <= 10)
+       		if(np >= 5 && np <= 10)
 		{
            		validNumPlayers = true;
            		return validNumPlayers; 
