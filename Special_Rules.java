@@ -7,7 +7,6 @@ public class Special_Rules {
 		public Special_Rules (boolean IsOn, String name){
 			this.IsOn = IsOn;
 			this.name = name ;
-			
 		}
 		
 		public boolean getIsOn(){
