@@ -1,10 +1,10 @@
-public class Voting {
+public class VotingData {
 
     public int inFavor; //to plithos twn yper
     public int against; //to plithos twn kata
     public int ongoingFailures; //o metritis gia tis synexomena mh egkekrimenes apostoles
 
-    public Voting() {
+    public VotingData() {
         this.inFavor = 0;
         this.against = 0;
         this.ongoingFailures = 0;
@@ -21,4 +21,19 @@ public class Voting {
     public void setOngoingFailures(int ongoingFailures) {
         this.ongoingFailures = ongoingFailures;
     }
+    
+    //δέχεται σαν όρισμα την ψήφο του παίκτη και αν είναι true αυξάνει τα υπέρ, διαφορετικά αυξάνει τα κατά 
+    public void saveVote(boolean vote){
+        if(vote){
+            this.inFavor++;
+        } else {
+            this.against++;
+        }
+    }
+
+    //επιστρέφει το συνολικό αποτέλεσμα της ψηφοφορίας
+    public boolean checkResult(){
+        return this.inFavor > this.against;
+    }
+    
 }
