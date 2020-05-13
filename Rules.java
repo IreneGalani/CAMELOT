@@ -17,6 +17,6 @@ public class Rules
     	public boolean verifySpRoles(boolean validSpRoles)
     	{
     	 //eksetasi me obj tou chooseSpRoles()
-	return validSpRoles
+	return validSpRoles;
    	}
 }
