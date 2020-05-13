@@ -9,7 +9,7 @@ public class QuestChoiceData
 {
     // μεταβλητές στιγμιοτύπου - αντικαταστήστε το ακόλουθο παράδειγμα
     // με τις δικές σας μεταβλητές
-    private int rAs;//roleassigned
+    //private int rAs;//roleassigned
     private int missioners;
     private int mis;//missioners
     private int noQ;//noQuest
