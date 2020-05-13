@@ -24,5 +24,22 @@ public class Special_Rules {
 	public void setname( String n){
 		name = n;
 	}
+	
+	public boolean checkTargeting(boolean IO,String NM){
+	   if(IO=true)
+	   {
+	       if (NM=="Targeting")
+	        {
+	            return target=true;
+	        }
+	       else{
+	           return false;
+	       }
+	   }
+	   else 
+	   {
+	       return target=false;
+	   }
+	}
 }
 
