@@ -1,7 +1,13 @@
 public class PlayerLeader extends Player {
 
-    public PlayerLeader(String username, boolean isLeader, boolean isLadyOfTheLake) {
-        super(username, true, isLadyOfTheLake);
+    public PlayerLeader(String username) {
+        super(username);
+    }
+    
+    @Override
+    public void setLeader(boolean leader) {
+        super.setLeader(leader);
+        System.out.println("new leader = " +username);
     }
 
 }
