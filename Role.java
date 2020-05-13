@@ -18,4 +18,12 @@ public class Role
     public void setGiven(boolean given){
     this.given = given;
       }
+    public void saveSpRoles()
+    {
+        if(validSpRoles = true)
+        {
+            //save objects tou chooseSpRoles() stis metavlites
+        }
+    }
 }
+
