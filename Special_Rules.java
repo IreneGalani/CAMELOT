@@ -3,6 +3,7 @@ public class Special_Rules {
 
 	public boolean IsOn; //Metavlhth pou dhlwnei an o eidikos kanonas einai energopoihmenos.
 	public String name;  //Metavlhth pou dhlwnei to onoma tou eidikou kanona.
+	private boolean target;// krataei to apotelesma tou elegxou Targeting.
 	
 	public Special_Rules (boolean IsOn, String name){
 		this.IsOn = false;
@@ -23,6 +24,23 @@ public class Special_Rules {
 	}
 	public String setname( String n){
 		name = n;
+	}
+	
+	public boolean checkTargeting(boolean IO,String NM){
+	   if(IO=true)
+	   {
+	       if (NM=="Targeting")
+	        {
+	            return target=true;
+	        }
+	       else{
+	           return false;
+	       }
+	   }
+	   else 
+	   {
+	       return target=false;
+	   }
 	}
 }
 
