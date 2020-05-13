@@ -28,5 +28,11 @@ public void setnumPlayers(int num){
 public void setrolesAssigned(int rolesA){
 	rolesAssigned = rolesA;
 }
-
+public int saveNumPlayers(int NumPlayers)
+    {
+        if(validNumPlayers = true){
+            numPlayers = np;
+        }
+        return numPlayers;
+    }
 }
