@@ -1,50 +1,55 @@
 
 public class Rules
 {
-	
-	private boolean validNumPlayers = false;
 	private boolean validSpRoles = false;
 	
-  	public boolean verifyNumPlayers(boolean validNumPlayers)
-	{
+  	public boolean verifyNumPlayers(int np)
+    	{
        		if(np >= 5 && np <= 10)
-		{
-           		validNumPlayers = true;
-           		return validNumPlayers; 
-		}
-	}
-
-    	public boolean verifySpRoles(boolean validSpRoles)
+       		{
+           		return true;
+        	}
+        	 else
+         	{
+            	 return false;
+           	 }
+       
+   	 }
+public boolean verifySpRoles(Role merlin,Role percival,Role mordred,Role oberon,Role morgana,boolean isUsed)
     {
-     if(percival.isUsed = true && merlin.isUsed = false)
+     if(percival.isUsed == true && merlin.isUsed == false)
      {
-         validSpRoles = false;
+         return false;
         }
      
-     else if(mordred.isUsed = true && merlin.isUsed = false)
+     else if(mordred.isUsed == true && merlin.isUsed == false)
      {
-         validSpRoles = false;
+         return false;
         }
         
-     else if(morgana.isUsed = true && (merlin.isUsed = false || percival.isUsed = false))
+     else if(morgana.isUsed == true && (merlin.isUsed == false || percival.isUsed == false))
      {
-         validSpRoles = false;
+         return false;
         }
-     else if(numPlayers = 5)
+     else if(numPlayers == 5)
      {
-         if(percival.isUsed = true && mordred.isUsed = false && morgana.isUsed = false)
+        if(percival.isUsed == true && mordred.isUsed == false && morgana.isUsed == false)
          {
-             valiSpRoles = false;
+             return false;
             }
-         else if( merlin.isUsed = true && percival.isUsed = true && mordred.isUsed = true && oberon.isUsed = true && morgana.isUsed = true)
+         else if( merlin.isUsed == true && percival.isUsed == true && mordred.isUsed == true && oberon.isUsed == true && morgana.isUsed == true)
          {
-             validSpRoles = false;
-            }  
-     }
-     else {
-         validSpRoles = true;
+             return false;
+            }
+            else 
+            {
+         return true;
         }
-     
-     return validSpRoles;
     }
+        else
+        {
+            return true;
+    }
+}
+    	
 }
