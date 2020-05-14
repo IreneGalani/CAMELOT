@@ -16,7 +16,7 @@ public class QuestOutcome {
         this.completedQuests=compq;
     }
    
-    public int add {
+    public int add() {
         this.completedQuests++;
         return this.completedQuests;
     }
