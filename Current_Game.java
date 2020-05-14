@@ -40,14 +40,15 @@ public void setnumPlayers(int num){
 public void setrolesAssigned(int rolesA){
 	rolesAssigned = rolesA;
 }
+ 
 
 public void VoteFails(){
         int fails = Vdata.checkFailures();
         if(fails > 0 && fails < 5) {
             String leader = chooseLeader();
-	    theLeader = new PlayerLeader(leader);
+	          theLeader = new PlayerLeader(leader);
             theLeader.setLeader(true);
-	}
+	      }
 }
 
 //μέθοδος για την επιλογή του παίκτη αρχηγού
@@ -58,7 +59,7 @@ public String chooseLeader(){
             this.keepLeader = 1;
         }
         return this.playerList[keepLeader-1];
-    }
+ }
 	
 	
 }
