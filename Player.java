@@ -8,6 +8,9 @@ public class Player {
     public int playerGames; //se poses partides exei summetasxei
     public int playerWins;
     public int playerDefeats;
+    Role playerRole //kathe paikths exei enan rolo
+    public String playerSide; //metavliti pou krataei to stratopedo kathe paikth
+    
 
     public Player(String username) {
         this.username = username;
@@ -20,8 +23,11 @@ public class Player {
         this.playerWins = 0;
         this.playerDefeats = 0;
     }
-
     
+    public void setPlayerRole(Role playerRole) {
+        this.playerRole = playerRole;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -61,4 +67,46 @@ public class Player {
     public void setPlayerDefeats(int playerDefeats) {
         this.playerDefeats = playerDefeats;
     }
+    
+    public String getPlayerSide() {
+        return playerSide;
+    }
+
+    public void setPlayerSide(String playerSide) {
+        this.playerSide = playerSide;
+    }
+    
+    //μέθοδος που ελέγχει το στρατόπεδο του ΧΑΡΑΚΤΗΡΑ του παίκτη και με βάση το αποτέλεσμα, ορίζει το στρατόπεδο του παίκτη
+    public void checkPlayerSide() {
+        boolean isGood = playerRole.checkSide();
+        if(isGood){
+            setPlayerSide("good");
+        } else {
+            setPlayerSide("evil");
+        }
+    }
+    
+    
+    //μέθοδος που ορίζει τον νέο παίκτη Lady of the Lake
+    public void setNewLady(){
+        if(this.canBeExamined) {
+            this.canBeExamined = false;
+        }
+        if(!this.isLadyOfTheLake){
+            setLadyOfTheLake(true);
+        } else {
+            setLadyOfTheLake(false);
+        }
+    }
+    
+    //μέθοδος που ελέγχει αν ο παίκτης που επέλεξε η Lady of the Lake μπορεί να εξεταστεί
+    public boolean validateLadysChoice(String name){
+        if(this.username.equals(name)){
+            if(this.canBeExamined){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
