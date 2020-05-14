@@ -26,10 +26,10 @@ public class Special_Rules {
 		name = n;
 	}
 	
-	public boolean checkTargeting(boolean IO,String NM){
-	   if(IO=true)
+	public boolean checkTargeting(boolean IsOn,String name){
+	   if(IsOn==true)
 	   {
-	       if (NM=="Targeting")
+	       if (name=="Targeting")
 	        {
 	            return target=true;
 	        }
