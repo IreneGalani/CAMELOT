@@ -4,9 +4,16 @@ public class Role {
     boolean isUsed;//o xaraktiras epilexthike
     boolean given;//o xaraktiras xrisimopoieitai
 
-    public Role(String roleName,String side) {
-        this.roleName = roleName;
-        this.side = side;
+    public Role(String roleName) {
+        this.roleName = roleName.toLowerCase();
+        switch (this.roleName){
+            case "good": case "merlin": case "percival":
+                this.side = "good";
+                break;
+            case "evil": case "mordred": case "oberon": case "morgana": default:
+                this.side = "evil";
+                break;
+        }
         this.isUsed = false;
         this.given = false;
     }
@@ -17,6 +24,19 @@ public class Role {
 
     public void setGiven(boolean given){
         this.given = given;
+    }
+    
+    public void setSide(String side) {
+        this.side = side;
+    }
+    
+    //μέθοδος που ελέγχει το στρατόπεδο του χαρακτήρα
+    public boolean checkSide(){
+        if(this.side.equals("good")){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
