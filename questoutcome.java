@@ -47,9 +47,7 @@ public class QuestOutcome {
                 return 0;
         }
    }
-      
-      //να γινει ξεχωριστη μεθοδος που θα δεχεται το αποτελεσμα της checkCompleted()
-      public void checkfining() {
+    public void checkfining() {
       if (score.evilSc==3 && checkCompleted()<5) {
          sp.LoLcheck();
       } else if (score.evilSc==3 && checkCompleted()==5) {
