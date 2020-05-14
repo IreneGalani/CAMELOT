@@ -47,7 +47,7 @@ public class Special_Rules {
 	   {
 	       if (sp1.name=="Targeting")
 	        {
-	            return target=true;
+	            return true;
 	        }
 	       else{
 	           return false;
@@ -55,7 +55,23 @@ public class Special_Rules {
 	   }
 	   else 
 	   {
-	       return target=false;
+	       return  false;
+	   }
+	}
+	public boolean checkTargeting(Special_Rules splol){
+	   if(splol.IsOn==true)
+	   {
+	       if (splol.name=="Lady of the Lake")
+	        {
+	            return true;
+	        }
+	       else{
+	           return false;
+	       }
+	   }
+	   else 
+	   {
+	       return false;
 	   }
 	}
 }
