@@ -47,12 +47,12 @@ public class Settings {
 	}
 
 
-	public void storevolume(){
+	public void storevolume( int Volume){
     	this.Volume = Volume ;
     	System.out.println("H entash afhghshs einai :" + this.Volume);
     }
     
-    public void storeaudio(){
+    public void storeaudio(boolean Is_on_hx){
     	this.Is_on_hx =Is_on_hx;
     	if (Is_on_hx == true){
     	System.out.println("O hxos polumeswn einai energopoihmenos ");
@@ -61,13 +61,13 @@ public class Settings {
     	}
     }
     
-    public void storeLang(){
+    public void storeLang(String Lang_Chosen){
     	this.Lang_Chosen =Lang_Chosen ;
     	System.out.println("H Glwssa pou xrhsimopoieitai einai :" + this.Lang_Chosen);
     	
     }
     
-    public void storeNotific(){
+    public void storeNotific(boolean Is_on_n){
     	this.Is_on_n =Is_on_n;
     	if (Is_on_n == true){
     	System.out.println("H leitourgia notifications einai energh ");
