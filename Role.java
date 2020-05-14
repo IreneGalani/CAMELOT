@@ -38,5 +38,12 @@ public class Role {
             return false;
         }
     }
+    public void checkformerlin() {
+        if (this.rolename=="Merlin" && this.isUsed=true){
+             System.out.println("EVIL's LAST CHANCE.");
+             choicecheck();
+        } else 
+             System.out.println("GOOD WIN.");
+    }
 
 }
