@@ -12,7 +12,6 @@ public Current_game (int numPlayers, int rolesAssigned)
 {
 	this.numPlayers = numPlayers;
 	this.rolesAssigned = rolesAssigned;
-	playerList = new String[10] {" "," "," "," "," "," "," "," "," "," "};
 	this.keepLeader = 0;
 	
 }
