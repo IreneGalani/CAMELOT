@@ -3,7 +3,7 @@ public class QuestOutcome {
    int fails;
    int completedQuests;
    Score score=new Score();
-   SpecialRules sp=new SpecialRues();
+   SpecialRules sp=new SpecialRules();
    //constructor
    public QuestOutcome() {
        this.fails=0;
@@ -16,18 +16,18 @@ public class QuestOutcome {
         this.completedQuests=compq;
     }
    
-    public int add(int completedQuests) {
+    public void add() {
         this.completedQuests++;
-        return this.completedQuests;
     }
-   public static void failnumcheck(int fails) {
+   
+   public static void failnumcheck() {
         if (this.fails>0) {
             score.adde();
-            add(completedQuests);
+            add();
             score.scorecheck();
         } else if (this.fails==0) {
             score.addg();
-            add(completedQuests);
+            add();
             score.scorecheck();
         }
    
@@ -46,6 +46,8 @@ public class QuestOutcome {
             default:
                 return 0;
         }
+      
+      //να γινει ξεχωριστη μεθοδος που θα δεχεται το αποτελεσμα της checkCompleted()
       if (score.evilSc==3 && completedQuests<5) {
          sp.LoLcheck();
       } else if (score.evilSc==3 && completedQuests==5) {
