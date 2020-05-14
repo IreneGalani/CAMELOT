@@ -16,15 +16,15 @@ public class Settings {
 	}
 	
 	public boolean getIs_On_hx(){
-		return Is_on_hx;
+		return this.Is_on_hx;
 	}
 	
 	public int getVolume(){
-		return Volume;
+		return this.Volume;
 	}
 	
 	public String getLang(){
-		return Lang_Chosen;
+		return this.Lang_Chosen;
 	}
 	
 	
@@ -43,18 +43,17 @@ public class Settings {
 	
 
     public boolean getIs_on_n() {
-		return Is_on_n;
+		return this.Is_on_n;
 	}
 
 
-	public void storevolume( Settings s1){                      // Methodos gia thn apothikeush ths timhs
-	 Volume = s1.Volume ;                                       // ths entashs afhghshs                            
-    	System.out.println("H entash afhghshs einai :" + Volume);
+	public void storevolume( int Volume){
+    	this.Volume = Volume ;
+    	System.out.println("H entash afhghshs einai :" + this.Volume);
     }
     
-    public void storeaudio(Settings s1){                                 
-	                                                                  //Methodos gia thn apothikeush an einai energopoihmenos    
-    	Is_on_hx = s1.Is_on_hx;                                           //   h oxi o Hxos polumeswn
+    public void storeaudio(boolean Is_on_hx){
+    	this.Is_on_hx =Is_on_hx;
     	if (Is_on_hx == true){
     	System.out.println("O hxos polumeswn einai energopoihmenos ");
     	}else {
@@ -62,14 +61,14 @@ public class Settings {
     	}
     }
     
-    public void storeLang(Settings s1){                                                 //Methodos gia thn apothikeush ths
-    	Lang_Chosen = s1.Lang_Chosen ;                                                  // glwssas pou  tha xrhsimopoithei 
-    	System.out.println("H Glwssa pou xrhsimopoieitai einai :" + Lang_Chosen);
+    public void storeLang(String Lang){
+    	this.Lang_Chosen =Lang ;
+    	System.out.println("H Glwssa pou xrhsimopoieitai einai :" + this.Lang_Chosen);
     	
     }
     
-    public void storeNotific(Settings s1){                                              //Methodos gia thn apothikeush an 
-    	Is_on_n = s1.Is_on_n;                                                           // theloume h oxi notifications
+    public void storeNotific(boolean Is_on_n){
+    	this.Is_on_n =Is_on_n;
     	if (Is_on_n == true){
     	System.out.println("H leitourgia notifications einai energh ");
     	}else {
