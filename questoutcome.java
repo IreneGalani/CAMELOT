@@ -3,7 +3,7 @@ public class QuestOutcome {
    int fails;
    int completedQuests;
    Score score=new Score();
-   SpecialRules sp=new SpecialRues();
+ 
    //constructor
    public QuestOutcome() {
        this.fails=0;
@@ -16,11 +16,12 @@ public class QuestOutcome {
         this.completedQuests=compq;
     }
    
-    public int add() {
+
+    public void add() {
         this.completedQuests++;
-        return this.completedQuests;
     }
-   public static void failnumcheck(int fails) {
+   
+   /*public static void failnumcheck() {
         if (this.fails>0) {
             score.adde();
             add();
@@ -29,7 +30,7 @@ public class QuestOutcome {
             score.addg();
             add();
             score.scorecheck();
-        }
+        }*/
    
    public int checkCompleted(){
         switch (this.completedQuests){
@@ -47,15 +48,5 @@ public class QuestOutcome {
                 return 0;
         }
    }
-      public void checkfinishing() {
-      if (score.evilSc==3 && checkCompleted()<5) {
-         sp.LoLcheck();
-      } else if (score.evilSc==3 && checkCompleted()==5) {
-         score.checkscore();
-      } else if(score.goodSc==3 && checkCompleted()<5) {
-         sp.loLcheck();
-      } else if(score.goodsc==3 && checkCompleted()==5){
-         score.checkscore();
-      }
-      }
+
 }
