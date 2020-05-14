@@ -11,7 +11,7 @@ public class History{
     private boolean saveGame;// save current game?
     private int savedGames;// #of saved Games
     private Player name;// player's name
-    
+    String[] allPlayers = new String(100);
 
     public History(int savedGames, Player username)
     {
@@ -38,7 +38,23 @@ public class History{
         this.savedGames= savedG;
     }
 }
-   
+   public boolean playerExists(String allPlayers[],boolean newPlayer)
+  {
+      for(int i = 0; i < 100; i++)
+      {
+          if(nm == allPlayers[i])
+          {
+              i = 100;
+              newPlayer = false;
+            }
+            else
+            {
+                newPlayer = true;
+            }
+        }
+      return newPlayer;
+            
+  }
     
     
 
