@@ -3,7 +3,7 @@ public class QuestOutcome {
    int fails;
    int completedQuests;
    Score score=new Score();
-   SpecialRules sp=new SpecialRules();
+ 
    //constructor
    public QuestOutcome() {
        this.fails=0;
@@ -21,7 +21,7 @@ public class QuestOutcome {
         this.completedQuests++;
     }
    
-   public static void failnumcheck() {
+   /*public static void failnumcheck() {
         if (this.fails>0) {
             score.adde();
             add();
@@ -30,7 +30,7 @@ public class QuestOutcome {
             score.addg();
             add();
             score.scorecheck();
-        }
+        }*/
    
    public int checkCompleted(){
         switch (this.completedQuests){
