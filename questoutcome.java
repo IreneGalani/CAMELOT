@@ -16,6 +16,7 @@ public class QuestOutcome {
         this.completedQuests=compq;
     }
    
+
     public void add() {
         this.completedQuests++;
     }
@@ -47,15 +48,5 @@ public class QuestOutcome {
                 return 0;
         }
    }
-    public void checkfining() {
-      if (score.evilSc==3 && checkCompleted()<5) {
-         sp.LoLcheck();
-      } else if (score.evilSc==3 && checkCompleted()==5) {
-         score.checkscore();
-      } else if(score.goodSc==3 && checkCompleted()<5) {
-         sp.loLcheck();
-      } else if(score.goodsc==3 && checkCompleted()==5){
-         score.checkscore();
-      }
-    }
+
 }
