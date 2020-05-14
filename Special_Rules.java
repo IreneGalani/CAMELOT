@@ -39,7 +39,7 @@ public class Special_Rules {
 		
 		public boolean getSpecialrules( Special_Rules sp1){
 			return sp1.IsOn;}
-}
+
 
 	
 	public boolean checkTargeting(Special_Rules sp1){
