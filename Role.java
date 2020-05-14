@@ -45,5 +45,19 @@ public class Role {
         } else 
             return false;
     }
-
+public void saveSpRoles(Role mer,Role per,Role mord,Role obe,Role morg)
+    {
+      
+            Role merlin = mer;
+            Role pericval = per;
+            Role mordred = mord;
+            Role oberon = obe;
+            Role morgana = morg;
+        
+    }
+    public boolean checkRoles()
+    {
+       
+       return isUsed;
+    }
 }
