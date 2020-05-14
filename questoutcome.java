@@ -23,11 +23,11 @@ public class QuestOutcome {
    public static void failnumcheck(int fails) {
         if (this.fails>0) {
             score.adde();
-            add(completedQuests);
+            add();
             score.scorecheck();
         } else if (this.fails==0) {
             score.addg();
-            add(completedQuests);
+            add();
             score.scorecheck();
         }
    
