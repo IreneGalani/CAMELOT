@@ -58,7 +58,7 @@ public class Special_Rules {
 	       return  false;
 	   }
 	}
-	public boolean checkTargeting(Special_Rules splol){
+	public boolean LoLcheck(Special_Rules splol){
 	   if(splol.IsOn==true)
 	   {
 	       if (splol.name=="Lady of the Lake")
