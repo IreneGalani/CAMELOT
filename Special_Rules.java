@@ -42,10 +42,10 @@ public class Special_Rules {
 }
 
 	
-	public boolean checkTargeting(boolean IsOn,String name){
-	   if(IsOn==true)
+	public boolean checkTargeting(Special_Rules sp1){
+	   if(sp1.IsOn==true)
 	   {
-	       if (name=="Targeting")
+	       if (sp1.name=="Targeting")
 	        {
 	            return target=true;
 	        }
