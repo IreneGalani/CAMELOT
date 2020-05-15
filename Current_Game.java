@@ -9,14 +9,25 @@ private VotingData Vdata = new VotingData();
 PlayerLeader theLeader;
 public boolean availName;//metavliti pou deixnei an iparxei to onoma sthn partida
 public int c = 0;
+Role[] role;
 	
-public Current_game (int numPlayers, int rolesAssigned)
+public Current_game (int numPlayers, Role[] role)
 {
-	this.numPlayers = numPlayers;
+	if(numPlayers >= 5 && numPlayers <= 10) {
+            this.numPlayers = numPlayers;
+        } else {
+            this.numPlayers = 5;
+        }
 	this.rolesAssigned = 0;
 	this.keepLeader = 0;
+	this.role = role;
 	
 }
+
+public Role[] getRole() {
+        return role;
+}
+	
 public void setAvailName(boolean availName)
 {
 	this.availName = availName;
@@ -96,5 +107,59 @@ public String chooseLeader(){
 	public void saveRoleAssignement(int count)
    {
        this.rolesAssigned = this.rolesAssigned + count;
+    }
+	
+public boolean verifySpRoles(){
+        boolean merlinUsed = false;
+        boolean percivalUsed = false;
+        boolean morganaUsed = false;
+        boolean mordredUsed = false;
+        boolean oberonUsed = false;
+        for(int i = 0; i < rolesAssigned; i++){
+            if(role[i].roleName.equals("merlin") && role[i].isUsed()){
+                merlinUsed = true;
+            }
+            if(role[i].roleName.equals("percival") && role[i].isUsed()){
+                percivalUsed = true;
+            }
+            if(role[i].roleName.equals("morgana") && role[i].isUsed()){
+                morganaUsed = true;
+            }
+            if(role[i].roleName.equals("mordred") && role[i].isUsed()){
+                mordredUsed = true;
+            }
+            if(role[i].roleName.equals("oberon") && role[i].isUsed()){
+                oberonUsed = true;
+            }
+        }
+        if(numPlayers == 5){
+            if(!percivalUsed && !morganaUsed && !mordredUsed && !oberonUsed){
+                return true;
+            } else {
+                return false;
+            }
+        } else if(numPlayers == 6){
+            if(!morganaUsed && !mordredUsed && !oberonUsed){
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (mordredUsed || morganaUsed) {
+                if (merlinUsed && percivalUsed) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            if (percivalUsed) {
+                if (merlinUsed) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
