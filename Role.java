@@ -18,5 +18,20 @@ public class Role {
     public void setGiven(boolean given){
         this.given = given;
     }
-
+public boolean checkMerlin (){
+			   if(this.rolename=='MERLIN')    
+			   {
+			       if (this.given==true)
+			        {
+			            return true;
+			        }
+			       else{
+			           return false;
+			       }
+			   }
+			   else 
+			   {
+			       return false;
+			   }
+		}
 }
