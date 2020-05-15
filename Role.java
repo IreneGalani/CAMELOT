@@ -19,7 +19,7 @@ public class Role {
         this.given = given;
     }
 public boolean checkMerlin (){
-			   if(this.rolename=='MERLIN')    
+			   if(this.rolename=="MERLIN")    
 			   {
 			       if (this.given==true)
 			        {
