@@ -21,7 +21,7 @@ public class QuestOutcome {
         this.completedQuests++;
     }
    
-   /*public static void failnumcheck() {
+   public void failnumcheck() {
         if (this.fails>0) {
             score.adde();
             add();
@@ -30,7 +30,7 @@ public class QuestOutcome {
             score.addg();
             add();
             score.scorecheck();
-        }*/
+        }
    
    public int checkCompleted(){
         switch (this.completedQuests){
@@ -48,5 +48,22 @@ public class QuestOutcome {
                 return 0;
         }
    }
-
-}
+public void checkfinishing(boolean lol){
+   if (completedquests<5 && score.evilSc==3) {
+      if(lol==true){
+       System.out.println("go on with Lady of the Lake");
+      } else
+       System.out.println("NEW LEADER WANTED");  
+   }
+} else if (completedquests==5 && score.evilSc==3) {
+      System.out.println("evil wins");
+} else if (completedquests<5 && score.goodSc==3) {
+      if(lol==true){
+       System.out.println("go on with Lady of the Lake");
+      } else
+       System.out.println("NEW LEADER WANTED");  
+   }
+} else if (completedquests==5 && score.evilSc==3) {
+         System.out.println("evil wins");
+   }
+   }
