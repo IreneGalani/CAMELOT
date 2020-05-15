@@ -5,14 +5,14 @@
  * 
  * @version1
  */
-public class Quest 
-{
+
+ public class Quest 
+  {
     private int questNumber;
     private int missioners;
     private int players;
     private int mis;
-    //private int r_as;
-    //Current_Game numPL= new Current_Game(players,r_as);
+    
 
     
     public Quest(int qNumber, int pl)
@@ -22,15 +22,7 @@ public class Quest
     }
     
     
-    public void setQuestNumber(int qNumber)
-    {
-             this.questNumber=qNumber;
-    } 
     
-    public void setNumPlayers(int pl)
-    {
-             this.players=pl;
-    } 
     
         
     public int getQuestNumber(){
@@ -43,10 +35,10 @@ public class Quest
     }
     
     
-          public int getMissioners(int pl,int qNumber){
+           public void setMissioners(int pl,int qNumber){
 		
-           int  num=pl;
-	   int  noQ=qNumber;
+             int  num=pl;
+	     int  noQ=qNumber;
 		
              if(num==5){
 		  if(noQ==1){
@@ -104,7 +96,7 @@ public class Quest
                     missioners=3;
                     }
                   else if(noQ==2){
-                    return missioners=4;
+                    missioners=4;
                     }
                   else if(noQ==3){
                      missioners=4;
@@ -156,9 +148,9 @@ public class Quest
              }
              
              this.mis=missioners; 
-             return mis;
+            
           }
-		  
-		  
-		
-}
+          public int getMissioners(){
+		  return this.mis;
+           }
+   }		
