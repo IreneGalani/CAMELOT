@@ -39,7 +39,7 @@ public class Role {
         }
     }
     public boolean checkformerlin() {
-        if (this.rolename=="Merlin" && this.isUsed==true){
+        if (this.rolename=="merlin" && this.isUsed==true){
             choicecheck();
             retutn true
         } else 
