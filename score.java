@@ -1,8 +1,10 @@
+
 public class score {
     int goodSc;
     int evilSc;
     private Questoutcome questoutcome=new Questoutcome();
-     //constructor
+    
+    //constructor
     public score() {
         this.goodSc=0;
         this.evilSc=0;
@@ -38,15 +40,15 @@ public  void scorecheck(boolean lol){
             } else {
              System.out.println("NEW LEADER WANTED");
             };
-} else if (this.evilSc==3) {
-    questoutcome.checkcompleted();
-} else if (this.goodSc==3) {
-    questoutcome.checkcompleted();
-} else if ((this.goodSc<3) && (questoutcome.fails==0)) {
-     if (lol==true){
-             System.out.println("LADY OF THE LAKE");
-            } else
-             System.out.println("NEW LEADER WANTED");
-            };
-}
+    } else if (this.evilSc==3) {
+      questoutcome.checkcompleted();
+    } else if (this.goodSc==3) {
+      questoutcome.checkcompleted();
+    } else if ((this.goodSc<3) && (questoutcome.fails==0)) {
+        if (lol==true){
+          System.out.println("LADY OF THE LAKE");
+        } else
+          System.out.println("NEW LEADER WANTED");
+        };
+    }
 }
