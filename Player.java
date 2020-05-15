@@ -27,6 +27,10 @@ public class Player {
     public void setPlayerRole(Role playerRole) {
         this.playerRole = playerRole;
     }
+    
+    public Role getPlayerRole() {
+        return playerRole;
+    }
 
     public void setUsername(String username) {
         this.username = username;
@@ -108,5 +112,5 @@ public class Player {
         }
         return false;
     }
-
+   
 }
