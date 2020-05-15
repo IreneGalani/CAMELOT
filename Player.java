@@ -108,5 +108,9 @@ public class Player {
         }
         return false;
     }
-
+   public void roleMatching(String nm,String roleName)
+    {
+        this.playerRole = new Role(roleName);
+        Player player = new Player(nm);
+    }
 }
