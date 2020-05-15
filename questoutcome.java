@@ -53,7 +53,7 @@ public void checkfinishing(boolean lol){
       if(lol==true){
        System.out.println("go on with Lady of the Lake");
       } else
-       System.out.println("NEW LEADER WANTED");  
+       System.out.println("evil wins");  
    }
 } else if (completedquests==5 && score.evilSc==3) {
       System.out.println("evil wins");
@@ -61,7 +61,7 @@ public void checkfinishing(boolean lol){
       if(lol==true){
        System.out.println("go on with Lady of the Lake");
       } else {
-       System.out.println("NEW LEADER WANTED");  
+       System.out.println("time to check for merlin");  
    }
 } else if (completedquests==5 && score.evilSc==3) {
          System.out.println("evil wins");
