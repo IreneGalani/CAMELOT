@@ -13,7 +13,7 @@ public int c = 0;
 public Current_game (int numPlayers, int rolesAssigned)
 {
 	this.numPlayers = numPlayers;
-	this.rolesAssigned = rolesAssigned;
+	this.rolesAssigned = 0;
 	this.keepLeader = 0;
 	
 }
@@ -69,20 +69,20 @@ public String chooseLeader(){
     {
         numPlayers = np;
     }
-	public boolean CurrNameCheck(String nm,boolean availName,String playerList[])
+	public boolean CurrNameCheck(String nm)
     {
         for(int i = 0; i < numPlayers; i++)
         {
             if (nm == playerList[i])
             {
                 i = numPlayers;
-                availName = false ;
+                this.availName = false ;
                 
             }
-                else
-                {
-                    availName = true;
-                }
+            else
+            {
+                this.availName = true;
+            }
         }
         return availName;
     }
@@ -93,8 +93,8 @@ public String chooseLeader(){
        c = c+1;
         
     }
-	public void saveRoleAssignement(int rolesAssigned)
+	public void saveRoleAssignement(int count)
    {
-       rolesAssigned = rolesAssigned + 1;
+       this.rolesAssigned = this.rolesAssigned + count;
     }
 }
