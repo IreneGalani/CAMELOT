@@ -8,7 +8,7 @@ public class Player {
     public int playerGames; //se poses partides exei summetasxei
     public int playerWins;
     public int playerDefeats;
-    Role playerRole //kathe paikths exei enan rolo
+    Role playerRole; //kathe paikths exei enan rolo
     public String playerSide; //metavliti pou krataei to stratopedo kathe paikth
     
 
