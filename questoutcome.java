@@ -60,7 +60,7 @@ public void checkfinishing(boolean lol){
 } else if (completedquests<5 && score.goodSc==3) {
       if(lol==true){
        System.out.println("go on with Lady of the Lake");
-      } else
+      } else {
        System.out.println("NEW LEADER WANTED");  
    }
 } else if (completedquests==5 && score.evilSc==3) {
