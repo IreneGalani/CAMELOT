@@ -7,15 +7,20 @@ public String [] playerList = new String [numPlayers] ; // Pinakas pou kataxwrou
 private int keepLeader; //voithitiki metavliti pou krataei ti thesi tou arxhgou sth lista paiktwn
 private VotingData Vdata = new VotingData();
 PlayerLeader theLeader;
+public boolean availName;//metavliti pou deixnei an iparxei to onoma sthn partida
+public int c = 0;
 	
 public Current_game (int numPlayers, int rolesAssigned)
 {
 	this.numPlayers = numPlayers;
-	this.rolesAssigned = rolesAssigned;
+	this.rolesAssigned = 0;
 	this.keepLeader = 0;
 	
 }
-
+public void setAvailName(boolean availName)
+{
+	this.availName = availName;
+}
 public void setPlayerList(String[] playerList) {
         this.playerList = playerList;
 }
@@ -60,5 +65,36 @@ public String chooseLeader(){
         return this.playerList[keepLeader-1];
  }
 	
-	
+	public void saveNumPlayers(int np)
+    {
+        numPlayers = np;
+    }
+	public boolean CurrNameCheck(String nm)
+    {
+        for(int i = 0; i < numPlayers; i++)
+        {
+            if (nm == playerList[i])
+            {
+                i = numPlayers;
+                this.availName = false ;
+                
+            }
+            else
+            {
+                this.availName = true;
+            }
+        }
+        return availName;
+    }
+	public void saveCurrName(String nm,int c)
+   {
+       
+       playerList[c] = nm;
+       c = c+1;
+        
+    }
+	public void saveRoleAssignement(int count)
+   {
+       this.rolesAssigned = this.rolesAssigned + count;
+    }
 }
