@@ -18,7 +18,7 @@ public class Role {
     public void setGiven(boolean given){
         this.given = given;
     }
-public boolean checkMerlin (){
+public boolean checkforMerlin (){
 			   if(this.rolename=="MERLIN")    
 			   {
 			       if (this.given==true)
