@@ -30,7 +30,7 @@ public class score {
         System.out.println("EVILS WIN.");
     }
     else if (this.goodSc==3 && mer==false) {
-    System.out.println("gGOOD WIN.");
+    System.out.println("GOOD WIN.");
 }
 }
 public  void scorecheck(boolean lol){
