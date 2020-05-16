@@ -38,14 +38,22 @@ public class Role {
             return false;
         }
     }
-    public boolean checkformerlin() {
-        if (this.rolename=="merlin" && this.isUsed==true){
-            choicecheck();
-            retutn true
-        } else 
-            return false;
-    }
-
+    public boolean checkformerlin (){
+			   if(this.name.equals("merlin")
+			   {
+			       if (this.given==true)
+			        {
+			            return true;
+			        }
+			       else{
+			           return false;
+			       }
+			   }
+			   else 
+			   {
+			       return false;
+			   }
+		}
     public boolean checkRoles()
     { 
        return this.isUsed;
