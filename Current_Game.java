@@ -3,7 +3,7 @@ public class Current_Game {
 	
 public int numPlayers; //Metavlhth pou orizei posoi paiktes dhlwthikan gia thn sigkekrimenh partida.
 public int rolesAssigned; // Metavlhth pou orizei ton metrhth pou metraei posoi xarakthres exoun dwthei se paiktes.
-public String [] playerList = new String [numPlayers] ; // Pinakas pou kataxwrountai ta onomata pou exoun lavei meros sth sugkekrimenh patida.
+public String [] playerList = new String [10] ; // Pinakas pou kataxwrountai ta onomata pou exoun lavei meros sth sugkekrimenh patida.
 private int keepLeader; //voithitiki metavliti pou krataei ti thesi tou arxhgou sth lista paiktwn
 private VotingData Vdata = new VotingData();
 PlayerLeader theLeader;
@@ -23,6 +23,8 @@ public Current_game (int numPlayers, Role[] role)
 	this.role = role;
 	
 }
+public Current_Game()
+{}
 
 public Role[] getRole() {
         return role;
@@ -161,5 +163,31 @@ public boolean verifySpRoles(){
             }
         }
         return true;
+    }
+	public boolean CurrNameCheck(String nm)
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            if (nm == playerList[i])
+            {
+                i = 10;
+                this.availName = false ;
+                
+            }
+            else
+            {
+                this.availName = true;
+            }
+        }
+        return availName;
+    }
+	public void saveCurrName(String nm) 
+{
+       
+       
+       playerList[c] = nm;
+       c = c+1;
+       
+    
     }
 }
