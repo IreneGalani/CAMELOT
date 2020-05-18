@@ -14,4 +14,12 @@ public class score {
     public void setEvilsc(int esc) {
         this.evilSc=esc;
     }
+    public int getGoodSc() {
+        return this.goodSc;
+        
+    }
+     public int getEvilSc() {
+        return this.evilSc;
+        
+    }
 }
