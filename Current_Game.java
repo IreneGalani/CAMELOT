@@ -10,6 +10,10 @@ PlayerLeader theLeader;
 public boolean availName;//metavliti pou deixnei an iparxei to onoma sthn partida
 public int c = 0;
 Role[] role;
+String random;// random leader
+int idx = new Random().nextInt(playerList.length);
+QuestChoiceData q=new QuestChoiceData() ;
+	
 	
 public Current_game (int numPlayers, Role[] role)
 {
@@ -68,13 +72,19 @@ public void VoteFails(){
 
 //μέθοδος για την επιλογή του παίκτη αρχηγού
 public String chooseLeader(){
-        if(this.keepLeader < this.playerList.length){
-            this.keepLeader++;
-        } else{
-            this.keepLeader = 1;
+        if (q.getCount()==1){
+          random = (playerList[idx]);
+          return random;
         }
-        return this.playerList[keepLeader-1];
- }
+        else{
+           if(this.keepLeader < this.playerList.length){
+              this.keepLeader++;
+           } else{
+              this.keepLeader = 1;
+           }
+           return this.playerList[keepLeader-1];
+        }
+    }
 	
 	public void saveNumPlayers(int np)
     {
