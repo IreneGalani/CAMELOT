@@ -14,13 +14,9 @@ public class Narration
     public void setFinished(boolean finished){
         this.finished = finished;
     }
-public void loadAudioClip(Role merlin,Role percival,Role mordred,Role oberon,Role morgana,boolean isUsed)
+public void loadAudioClip(Role checkrole)
     {
-        merlin.checkRoles(isUsed);
-        percival.checkRoles(isUsed);
-        mordred.checkRoles(isUsed);
-        oberon.checkRoles(isUsed);
-        morgana.checkRoles(isUsed);
+        boolean mybool = checkrole.checkRoles();
         //load audio clip 
     }
     
