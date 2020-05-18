@@ -28,11 +28,12 @@ public class QuestChoiceData
              
     }
             // methodos pou ay3anei to countQuest
-            // an h epilogh missioners tou Paikth-Arxhgoy egkrithei(apo voting data), pername se diekperaiwsh=> count++
-    public void setQuestChoice(int v1, int v2)
-    { if(v1>v2){
+            // an OnGoingFailures=0, return true apo getSetZero ->Voting=> count++
+    public void setQuestChoice(boolean ogF)
+     {if(ogF==true){
         this.countQuest=countQuest+1;
-     }
+      }             
+    } 
              
     } 
     public int getCount(){
