@@ -9,41 +9,84 @@ public class QuestChoiceData
 {
     // μεταβλητές στιγμιοτύπου - αντικαταστήστε το ακόλουθο παράδειγμα
     // με τις δικές σας μεταβλητές
-    //private int rAs;//roleassigned
-    private int missioners;
-    private int mis;//missioners
-    private int noQ;//noQuest
+    /
+     private int missioners;
+   
+    private int leadersChoice;// epilogh (quest/missioners) apo leader
+    
     private int countQuest;// h apostolh pou briskomaste
-    private boolean IsOn;//for targeting
-    private String name;// name of sp rule
-    private String Lname;// leader name
+    private boolean validChoice;
+   
     private boolean targetingOn;
-    private int numPl;//numof players
-    Special_Rules targeting= new Special_Rules(IsOn,name);
-    Quest rm = new Quest(noQ,numPl );
-    //Player LeaderName= new Player(username,isLeader,isLadyOfTheLake);
-    //Current_Game chL= new Current_Game(numPl, rAs);
-     
+    private String[] ml= new String [missioners] ;
+    
+    
 
-    public QuestChoiceData(int cQ)
+   public QuestChoiceData()
     {
-             this.countQuest=cQ;
-             //this.missioners= mis;
+             this.countQuest=1;
+             
     }
-            
-    public void setQuestChoice(int cQ)
-    {
-             countQuest=cQ;
+            // methodos pou ay3anei to countQuest
+            // an h epilogh missioners tou Paikth-Arxhgoy egkrithei(apo voting data), pername se diekperaiwsh=> count++
+    public void setQuestChoice(int v1, int v2)
+    { if(v1>v2){
+        this.countQuest=countQuest+1;
+     }
+             
     } 
+    public int getCount(){
+     return this.countQuest;
+    }
      
-   public boolean TargetingOn(boolean IsOn, String name) {
-           targetingOn=targeting.checkTargeting(IsOn,name);
-           return targetingOn;
+   public void TargetingOn(boolean on) {
+       if(on){
+           this.targetingOn= true;
+        } else{
+           this.targetingOn = false;
+        }
    }
     
-   public int returnMissioners(int noQ, int numPl){
+   public void stMissioners(Quest rm){
+        if((rm.getNumPlayers()==5 || rm.getNumPlayers()==6 || rm.getNumPlayers()==7) && countQuest==1) {
+          this.missioners=2;
+        }
+        else if((rm.getNumPlayers()==8 || rm.getNumPlayers()==9 || rm.getNumPlayers()==10) && countQuest==1){
+           this.missioners=3;
+        }
+        else{
+          this.missioners =rm.getMissioners();
+        }
+    }
+   public int returnMissioners(){
+        return this.missioners;
+    }
+   // methodos poy elegxei an h epilogh Quest/missioners tou Paikth-Arxhgoy einai egkyrh-- syndeetai me interface
+   public void checkLeadersChoice(int qq, int qo1){
+     if(qq==5 && qo1<2){
+         this.validChoice=false; //not valid choice         
+         System.out.println("Not valid choice, choose another quest!");
                  
-       return missioners = rm.getMissioners( noQ, numPl);   
-                 
-   }  
-}      
+        }
+     else{
+        this.validChoice=true; //valid choice        
+    }
+    }
+   public boolean getValidChoice(){
+     return this.validChoice;
+    }
+   //set get ths epiloghs quest tou Paikth Arxhgou sth periptwsh targeting
+    public void setLeadersChoice(int q){
+    this.leadersChoice=q;
+    }
+   
+    public int getLeadersChoice(){
+    return this.leadersChoice;
+    }
+   //save epilogh missioners
+   public void saveMissioners(String [] pl){
+    this.ml=pl;
+   }
+}  
+
+      
