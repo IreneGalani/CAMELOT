@@ -48,15 +48,15 @@ public class QuestChoiceData
         }
    }
     
-   public void stMissioners(Quest rm){
-        if((rm.getNumPlayers()==5 || rm.getNumPlayers()==6 || rm.getNumPlayers()==7) && countQuest==1) {
+  public void stMissioners(int rm){
+        if((rm==5 || rm==6 || rm==7) && countQuest==1) {
           this.missioners=2;
         }
-        else if((rm.getNumPlayers()==8 || rm.getNumPlayers()==9 || rm.getNumPlayers()==10) && countQuest==1){
+        else if((rm==8 || rm==9 || rm==10) && countQuest==1){
            this.missioners=3;
         }
         else{
-          this.missioners =rm.getMissioners();
+          this.missioners =rm;
         }
     }
    public int returnMissioners(){
