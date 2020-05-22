@@ -21,15 +21,15 @@ public class QuestOutcome {
         this.completedQuests++;
     }
    
-   public void failnumcheck() {
+   public void failnumcheck(boolean lol) {
         if (this.fails>0) {
             score.adde();
             add();
-            score.scorecheck();
+            score.scorecheck(lol);
         } else if (this.fails==0) {
             score.addg();
             add();
-            score.scorecheck();
+            score.scorecheck(lol);
         }
    
    public int checkCompleted(){
