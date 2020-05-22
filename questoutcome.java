@@ -54,16 +54,17 @@ public void checkfinishing(boolean lol){
        System.out.println("go on with Lady of the Lake");
       } else
        System.out.println("evil wins");  
-   }
+   
 } else if (completedquests==5 && score.evilSc==3) {
       System.out.println("evil wins");
 } else if (completedquests<5 && score.goodSc==3) {
       if(lol==true){
        System.out.println("go on with Lady of the Lake");
       } else {
-       System.out.println("time to check for merlin");  
-   }
-} else if (completedquests==5 && score.evilSc==3) {
+       System.out.println("time to check for merlin"); 
+      } 
+   } else if (completedquests==5 && score.evilSc==3) {
          System.out.println("evil wins");
    }
    }
+}
