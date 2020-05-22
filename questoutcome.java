@@ -49,13 +49,13 @@ public class QuestOutcome {
         }
    }
 public void checkfinishing(boolean lol){
-   if (completedquests<5 && score.evilSc==3) {
+   if (this.completedquests<5 && score.evilSc==3) {
       if(lol==true){
        System.out.println("go on with Lady of the Lake");
-      } else
-       System.out.println("evil wins");  
-   
-} else if (completedquests==5 && score.evilSc==3) {
+      } else {
+       System.out.println("evil wins"); 
+   }
+ } else if (this.completedquests==5 && score.evilSc==3) {
       System.out.println("evil wins");
 } else if (completedquests<5 && score.goodSc==3) {
       if(lol==true){
