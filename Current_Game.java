@@ -88,27 +88,7 @@ public String chooseLeader(){
         }
     }
 	
-	public void saveNumPlayers(int np)
-    {
-        numPlayers = np;
-    }
-	public boolean CurrNameCheck(String nm)
-    {
-        for(int i = 0; i < numPlayers; i++)
-        {
-            if (nm == playerList[i])
-            {
-                i = numPlayers;
-                this.availName = false ;
-                
-            }
-            else
-            {
-                this.availName = true;
-            }
-        }
-        return availName;
-    }
+	
 	public void saveCurrName(String nm,int c)
    {
        
