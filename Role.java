@@ -39,7 +39,7 @@ public class Role {
         }
     }
     public boolean checkformerlin (){
-			   if(this.name.equals("merlin")
+			   if(this.roleName.equals("merlin"))
 			   {
 			       if (this.given==true)
 			        {
