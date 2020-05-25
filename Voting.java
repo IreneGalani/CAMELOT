@@ -54,5 +54,10 @@ public class VotingData {
     public void increaseFailures(){
         ongoingFailures++;
     }
-    
+     public boolean getZero(){
+       if(ongoingFailures ==0){
+        return true;}
+       else{
+         return false;}
+    }
 }
