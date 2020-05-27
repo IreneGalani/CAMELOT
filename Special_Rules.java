@@ -1,73 +1,80 @@
 
 public class Special_Rules {
 
-		public boolean IsOn; //Metavlhth pou dhlwnei an o eidikos kanonas einai energopoihmenos.
+		public boolean IsOn;//Metavlhth pou dhlwnei an o eidikos kanonas einai energopoihmenos.
+		public boolean IsOnt;
+		public boolean IsOnl;
 		public String name;  //Metavlhth pou dhlwnei to onoma tou eidikou kanona.
+	
 		
-		
-		public Special_Rules (boolean IsOn, String name){
-			this.IsOn = IsOn;
-			this.name = name ;
+		public Special_Rules (boolean IsOnl, boolean IsOnt){
+			this.IsOnl = IsOnl;
+			this.IsOnt = IsOnt  ;
 			
 		}
 		
-		public boolean getIsOn(){
-			return IsOn;
+		public boolean getIsOnl(){
+			return IsOnl;
+		}
+		public boolean getIsOnt(){
+			return IsOnt;
 		}
 		
 		public String getname(){
 			return name;
 		}
 		
-		public void setIsOn (boolean Io){
-			IsOn = Io;
+		public void setIsOnl (boolean Io){
+			IsOnl = Io;
 		}
-		public void setname ( String n){
-			name = n;
+		public void setIsOnt ( boolean Io){
+			IsOnt = Io;
 		}
 		
 		public void storeSpecialrules(){
-		    if (this.IsOn == true){
-		    	System.out.println(" O eidikos kanonas " + this.name +  " einai energopoihmenos");
-		    	this.IsOn = true;
+		    if (this.IsOnl == true){
+		    	
+		    	//System.out.println(" O eidikos kanonas Lady of the lake einai  einai energopoihmenos");
+		    	this.IsOnl = true;
 		    }
 		    else {
-		    	System.out.println(" O eidikos kanonas " + this.name +  " einai apenergopoihmneos");
-		    	this.IsOn = false;
+		    	//System.out.println(" O eidikos kanonas Lady of the lake einai apenergopoihmneos");
+		    	this.IsOnl = false;
 		    }
+            if (this.IsOnt == true){
+		    	
+		    	//System.out.println(" O eidikos kanonas Targeting einai  einai energopoihmenos");
+		    	this.IsOnt = true;
+		    }
+		    else {
+		    	//System.out.println(" O eidikos kanonas Targeting einai apenergopoihmneos");
+		    	this.IsOnt = false;
+		    }
+		    
 			}
 		
-		public boolean getSpecialrules(){
-			return this.IsOn;
+		public boolean getSpecialrulesT(){
+			return this.IsOnt;
+			}
+		public boolean getSpecialrulesL(){
+			return this.IsOnl;
 			}
 		
 		public boolean checkTargeting(){
-			   if(this.IsOn==true)
+			   if(this.IsOnt==true)
 			   {
-			       if (this.name=="Targeting")
-			        {
 			            return true;
-			        }
-			       else{
-			           return false;
-			       }
-			   }
-			   else 
+			            }
+			    else 
 			   {
 			       return false;
 			   }
 			}
 		
 		public boolean checkLoL (){
-			   if(this.IsOn==true)
+			   if(this.IsOnl==true)
 			   {
-			       if (this.name=="Lady of the Lake")
-			        {
-			            return true;
-			        }
-			       else{
-			           return false;
-			       }
+			       return true;
 			   }
 			   else 
 			   {
