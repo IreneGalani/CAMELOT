@@ -9,7 +9,7 @@ public class QuestChoiceData
 {
     // μεταβλητές στιγμιοτύπου - αντικαταστήστε το ακόλουθο παράδειγμα
     // με τις δικές σας μεταβλητές
-    /
+    
      private int missioners;
    
     private int leadersChoice;// epilogh (quest/missioners) apo leader
@@ -29,13 +29,13 @@ public class QuestChoiceData
     }
             // methodos pou ay3anei to countQuest
             // an OnGoingFailures=0, return true apo getSetZero ->Voting=> count++
-    public void setQuestChoice(int count)
+    public void setQuestChoice(int count){
    
         this.countQuest=count;
                
     } 
              
-    } 
+    
     public int getCount(){
      return this.countQuest;
     }
