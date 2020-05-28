@@ -29,7 +29,7 @@ public class QuestChoiceData
     }
             // methodos pou ay3anei to countQuest
             // an OnGoingFailures=0, return true apo getSetZero ->Voting=> count++
-    public void setQuestChoice(int count){
+    public void setCountQuest(int count){
    
         this.countQuest=count;
                
