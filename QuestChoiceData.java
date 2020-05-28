@@ -15,9 +15,9 @@ public class QuestChoiceData
     private int leadersChoice;// epilogh (quest/missioners) apo leader
     
     private int countQuest;// h apostolh pou briskomaste
-    private boolean validChoice;
+    
    
-    private boolean targetingOn;
+   
     private String[] ml= new String [missioners] ;
     
     
@@ -29,10 +29,10 @@ public class QuestChoiceData
     }
             // methodos pou ay3anei to countQuest
             // an OnGoingFailures=0, return true apo getSetZero ->Voting=> count++
-    public void setQuestChoice(boolean ogF)
-     {if(ogF==true){
-        this.countQuest=countQuest+1;
-      }             
+    public void setQuestChoice(int count)
+   
+        this.countQuest=count;
+               
     } 
              
     } 
@@ -40,42 +40,18 @@ public class QuestChoiceData
      return this.countQuest;
     }
      
-   public void TargetingOn(boolean on) {
-       if(on){
-           this.targetingOn= true;
-        } else{
-           this.targetingOn = false;
-        }
-   }
+ 
     
-  public void stMissioners(int rm){
-        if((rm==5 || rm==6 || rm==7) && countQuest==1) {
-          this.missioners=2;
-        }
-        else if((rm==8 || rm==9 || rm==10) && countQuest==1){
-           this.missioners=3;
-        }
-        else{
-          this.missioners =rm;
-        }
+  public void stMissioners(int k){
+       
+          this.missioners =k;
+        
     }
    public int returnMissioners(){
         return this.missioners;
     }
    // methodos poy elegxei an h epilogh Quest/missioners tou Paikth-Arxhgoy einai egkyrh-- syndeetai me interface
-   public void checkLeadersChoice(int qq, int qo1){
-     if(qq==5 && qo1<2){
-         this.validChoice=false; //not valid choice         
-         System.out.println("Not valid choice, choose another quest!");
-                 
-        }
-     else{
-        this.validChoice=true; //valid choice        
-    }
-    }
-   public boolean getValidChoice(){
-     return this.validChoice;
-    }
+ 
    //set get ths epiloghs quest tou Paikth Arxhgou sth periptwsh targeting
     public void setLeadersChoice(int q){
     this.leadersChoice=q;
