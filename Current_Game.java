@@ -61,17 +61,15 @@ public void setrolesAssigned(int rolesA){
 }
  
 
-public boolean VoteFails(){
+public String VoteFails(){
         int fails = Vdata.checkFailures();
-        if(fails > 0 && fails < 5) {
+        if((fails > 0 && fails < 5) || (fails == 0)) {
             String leader = chooseLeader();
 	    theLeader = new PlayerLeader(leader);
             theLeader.setLeader(true);
-	    return true;
-	} else if(fails == 0){
-		return false;
+	    return leader;
 	} else {
-		return true;
+		return "";
 	}
 }
 
