@@ -39,6 +39,9 @@ public void setAvailName(boolean availName)
 {
 	this.availName = availName;
 }
+public String[] getPlayerList(){
+    return PlayerList;
+}
 public void setPlayerList(String[] playerList) {
         this.playerList = playerList;
 }
