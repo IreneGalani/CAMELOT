@@ -12,7 +12,7 @@ Role[] role;
 Player[] player;
 	
 	
-public Current_game (int numPlayers, Role[] role)
+public Current_Game (int numPlayers, Role[] role)
 {
 	this.rolesAssigned = 0;
 	this.keepLeader = 0;
