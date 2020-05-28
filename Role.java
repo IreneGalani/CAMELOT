@@ -25,6 +25,12 @@ public class Role {
     public void setGiven(boolean given){
         this.given = given;
     }
+	public boolean getGiven() {
+    	return given;
+    }
+    public String getRoleName() {
+    	return roleName;
+    }
     
     public void setSide(String side) {
         this.side = side;
