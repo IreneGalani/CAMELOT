@@ -8,5 +8,9 @@ public class PlayerLadyOfTheLake extends Player {
     public void setNewLady() {
         super.setNewLady();
     }
-
+    
+    @Override
+	public boolean isLadyOfTheLake() {
+		return super.isLadyOfTheLake();
+    }
 }
