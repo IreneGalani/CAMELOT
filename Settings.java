@@ -6,11 +6,11 @@ public class Settings {
 	public boolean Is_on_n; // Metavlhth gia ta Notifications.
 	public String Lang_Chosen;//Metavlhth gia thn epilogh glwssas.Thn arxikopoihoume se Greek.
 	
-	public Settings (int Volume, boolean Is_on_hx, String Lang_chosen, boolean Is_on_n){
-		this.Volume = Volume;
-		this.Is_on_hx = Is_on_hx;
+	public Settings (){
+		this.Volume = 50;
+		this.Is_on_hx = true;
 		this.Lang_Chosen = "Greek";
-		this.Is_on_n = Is_on_n;   /* Prosthesa allh mia boolean metavlhth etsi wste kathe fora 
+		this.Is_on_n = true;   /* Prosthesa allh mia boolean metavlhth etsi wste kathe fora 
 		                        pou dhmiourgeitai ena antikeimo tupou settings, na mhn ephreazetai
 		                        h timh gia tis metavlhtes hxos_polumeswn kai Notifications  */
 	}
