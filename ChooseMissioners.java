@@ -657,7 +657,7 @@ public class ChooseMissioners extends JFrame {
 					}
 				//String[] missioners=qd.ml;
 				VotingData vd=new VotingData();
-				Voting k = new Voting(vd,qd,curr,a);						
+				Voting1 k = new Voting1(vd,qd,curr,a);						
                 k.dispose();
 				k.setVisible(true);
 			}
