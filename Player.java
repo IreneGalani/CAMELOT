@@ -47,6 +47,10 @@ public class Player {
     public void setLadyOfTheLake(boolean ladyOfTheLake) {
         isLadyOfTheLake = ladyOfTheLake;
     }
+    
+    public boolean isLadyOfTheLake() {
+		return isLadyOfTheLake;
+	}
 
     public void setNewPlayer(boolean newPlayer) {
         this.newPlayer = newPlayer;
@@ -111,12 +115,6 @@ public class Player {
             }
         }
         return false;
-    }
-    //methodos pou antistoixizei to onoma paikti me to xaraktira tou
-    public void roleMatching(Role playerRole,String username )
-    {
-       setPlayerRole(playerRole);
-       setUsername(username);
     }
    
 }
