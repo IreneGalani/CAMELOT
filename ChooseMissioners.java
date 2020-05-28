@@ -506,6 +506,7 @@ public class ChooseMissioners extends JFrame {
 		
 		
 		
+		names=curr.playerList;
 		for(int i=0;i<names.length;i++) {
 			if(i==0) {
 				cb1.setText(names[i]);
