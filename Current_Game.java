@@ -8,7 +8,6 @@ private int keepLeader; //voithitiki metavliti pou krataei ti thesi tou arxhgou 
 private VotingData Vdata = new VotingData();
 PlayerLeader theLeader;
 public boolean availName;//metavliti pou deixnei an iparxei to onoma sthn partida
-public int c = 0;
 Role[] role;
 Player[] player;
 	
@@ -31,6 +30,10 @@ public void setPlayer(Player[] player) {
 public Role[] getRole() {
         return role;
 }
+	
+public void setRole(Role[] role) {
+        this.role = role;
+    }	
 	
 public void setAvailName(boolean availName)
 {
@@ -58,13 +61,18 @@ public void setrolesAssigned(int rolesA){
 }
  
 
-public void VoteFails(){
+public boolean VoteFails(){
         int fails = Vdata.checkFailures();
         if(fails > 0 && fails < 5) {
             String leader = chooseLeader();
-	          theLeader = new PlayerLeader(leader);
+	    theLeader = new PlayerLeader(leader);
             theLeader.setLeader(true);
-	      }
+	    return true;
+	} else if(fails == 0){
+		return false;
+	} else {
+		return true;
+	}
 }
 
 //μέθοδος για την επιλογή του παίκτη αρχηγού
@@ -83,10 +91,21 @@ public String chooseLeader(){
         }
     }
 	
+	public VotingData getVdata() {
+		return Vdata;
+	}
+
+	public void setVdata(VotingData vdata) {
+		Vdata = vdata;
+	}
 	
 	public void saveRoleAssignement(int count)
    {
        this.rolesAssigned = this.rolesAssigned + count;
+    }
+	
+	 public int getKeepLeader() {
+        return keepLeader;
     }
 	
 public boolean verifySpRoles(){
