@@ -77,18 +77,13 @@ public boolean VoteFails(){
 
 //μέθοδος για την επιλογή του παίκτη αρχηγού
 public String chooseLeader(){
-        if (q.getCount()==1){
-          random = (playerList[idx]);
-          return random;
-        }
-        else{
-           if(this.keepLeader < this.playerList.length){
-              this.keepLeader++;
-           } else{
-              this.keepLeader = 1;
-           }
-           return this.playerList[keepLeader-1];
-        }
+        
+       if(this.keepLeader < this.playerList.length){
+	              this.keepLeader++;
+	           } else{
+	              this.keepLeader = 1;
+	           }
+	           return this.playerList[keepLeader-1];
     }
 	
 	public VotingData getVdata() {
