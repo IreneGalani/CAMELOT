@@ -70,6 +70,9 @@ public class QuestChoiceData
 	 public String getML(int i) {
 	   return ml[i];
    }
+	 public int getMLen() {
+	   return  ml.length;
+   }
 }  
 
       
