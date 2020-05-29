@@ -67,6 +67,9 @@ public class QuestChoiceData
     public String[] getSMis() {
 	   return this.ml;
    }
+	 public String getML(int i) {
+	   return ml[i];
+   }
 }  
 
       
