@@ -33,6 +33,7 @@ public class RankingMenu1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public RankingMenu1() {
 		setSize(350,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,9 +47,9 @@ public class RankingMenu1 extends JFrame {
 		newGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			    Special_Rules b=new Special_Rules(false,false);
-			////	ArxikoMenuOth g = new ArxikoMenuOth(b);						
-              //  g.dispose();
-				//g.setVisible(true);
+				ArxikoMenuOth g = new ArxikoMenuOth(b);						
+                                    dispose();
+				g.setVisible(true);
 			}
 			
 		});
@@ -58,9 +59,9 @@ public class RankingMenu1 extends JFrame {
 		JRadioButton exit = new JRadioButton("\u0388\u03BE\u03BF\u03B4\u03BF");
 		exit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//Rating r = new Rating();						
-               // r.dispose();
-			//	r.setVisible(true);
+				Rating r = new Rating();						
+                                  dispose();
+				r.setVisible(true);
 			}
 				
 			
