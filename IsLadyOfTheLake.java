@@ -103,7 +103,7 @@ public class IsLadyOfTheLake1 extends JFrame {
 		NextButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				ChoosePlayerName chooseN = new ChoosePlayerName(qd, curr, a, qo, src);
+				ChoosePlayerName chooseN = new ChoosePlayerName(qd, curr, a, qo, scr);
 				chooseN.setVisible(true);
 			}
 		});
