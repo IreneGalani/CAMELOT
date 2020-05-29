@@ -64,6 +64,9 @@ public class QuestChoiceData
    public void saveMissioners(String [] pl){
     this.ml=pl;
    }
+    public String[] getSMis() {
+	   return this.ml;
+   }
 }  
 
       
