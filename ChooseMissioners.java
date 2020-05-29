@@ -1,5 +1,3 @@
-package camelot1;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -101,7 +99,7 @@ public class ChooseMissioners extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("\u0395\u03C0\u03B9\u03BB\u03BF\u03B3\u03AE Missioners  \u03B1\u03C0\u03CC");
+		JLabel lblNewLabel = new JLabel("\u0395\u03C0\u03B9\u03BB\u03BF\u03B3\u03AE Missioners  \u03B1\u03C0\u03CC"+qd.getCount());
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel.setBounds(90, 11, 161, 23);
 		contentPane.add(lblNewLabel);
@@ -116,11 +114,7 @@ public class ChooseMissioners extends JFrame {
 		
 		// Player lead =new Player("tade");
 		 
-		 JLabel leader = new JLabel("");
-			leader.setBounds(275, 11, 89, 23);
-			contentPane.add(leader);
-			
-			leader.setText(led);
+		
 	           
 		if(a.checkTargeting()) {
 		mis_num=qd.returnMissioners();		    
@@ -128,11 +122,19 @@ public class ChooseMissioners extends JFrame {
 		else {	
 			//curr.setnumPlayers(6);
 			led=curr.chooseLeader();
-			if (curr.VoteFails()==true) {
-			   led= curr.chooseLeader();	    	
-		    }
+			if (curr.VoteFails().equals("")) {
+ 		    	//led=curr.chooseLeader();	
+ 	    }
+ 		    else {
+ 		
+ 			 led=curr.VoteFails();
+ 	    }
 			
-		    
+			 JLabel leader = new JLabel("");
+				leader.setBounds(275, 11, 89, 23);
+				contentPane.add(leader);
+				
+				leader.setText(led);
 			if(qd.getCount()==1){
 	            if( curr.getnumPlayers()==5|| curr.getnumPlayers()==6|| curr.getnumPlayers()==7){
 	              mis_num=2;
@@ -185,18 +187,18 @@ public class ChooseMissioners extends JFrame {
 			qd.stMissioners(mis_num);
 			if(qd.returnMissioners()==2) {
 			String[]	missioners= {"",""};
-			qd.saveMissioners(missioners);
+			qd.ml=missioners;
 			}
 			else if(qd.returnMissioners()==3) {
 				String[]	missioners= {"","",""};
-				qd.saveMissioners(missioners);
+				qd.ml=missioners;
 			}
 			else if(qd.returnMissioners()==4) {
 				String[]	missioners= {"","","",""};
-				qd.saveMissioners(missioners);
+				qd.ml=missioners;
 			}else if(qd.returnMissioners()==5) {
 				String[]	missioners= {"","","","",""};
-				qd.saveMissioners(missioners);
+				qd.ml=missioners;
 			}
 		}  
 			//  qd.stMissioners(mis_num);
@@ -504,9 +506,8 @@ public class ChooseMissioners extends JFrame {
 				}
 		});
 		
+		names=curr.playerList;
 		
-		
-		names=curr.getPlayerList();
 		for(int i=0;i<names.length;i++) {
 			if(i==0) {
 				cb1.setText(names[i]);
@@ -581,6 +582,7 @@ public class ChooseMissioners extends JFrame {
 					while(qd.ml[count]!="") {
 						count++;
 											}
+					
 					qd.ml[count]=mis1;
 					}
 				if(cb2.isSelected()) {
@@ -658,7 +660,7 @@ public class ChooseMissioners extends JFrame {
 					}
 				//String[] missioners=qd.ml;
 				VotingData vd=new VotingData();
-				Voting1 k = new Voting1(vd,qd,curr,a);						
+				Voting k = new Voting(vd,qd,curr,a);						
                 k.dispose();
 				k.setVisible(true);
 			}
