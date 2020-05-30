@@ -7,14 +7,8 @@ public class EndoftheGame
     public EndoftheGame() {
         this.winnerside=winnerside;
     }
-   public void setWinnerSide(int goodS, int evilS) {
-        this.gS=goodS;
-        this.eS=evilS;
-        if(gS>eS){
-        this.winnerside="good";}
-        else{
-        this.winnerside="evil";
-    }
+   public void setWinnerSide(String winsid) {
+        this.winnerside=winsid;
     }
     //
     public String getWinnerSide() {
