@@ -40,7 +40,9 @@ public class QuestChoiceData
      return this.countQuest;
     }
      
- 
+  public void saveMissioners(String [] pl){
+	    this.ml=pl;
+	   }
     
   public void stMissioners(int k){
        
