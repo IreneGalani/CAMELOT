@@ -60,10 +60,7 @@ public class QuestChoiceData
     public int getLeadersChoice(){
     return this.leadersChoice;
     }
-   //save epilogh missioners
-   public void saveMissioners(String [] pl){
-    this.ml=pl;
-   }
+ 
     public String[] getSMis() {
 	   return this.ml;
    }
