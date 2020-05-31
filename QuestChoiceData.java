@@ -45,6 +45,10 @@ public class QuestChoiceData
   public void saveMissioners(String [] pl){
 	    this.ml=pl;
 	   }
+	
+	public int getHasVoted() {
+		return hasVoted;
+	}
     
   public void stMissioners(int k){
        
