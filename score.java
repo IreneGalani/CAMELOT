@@ -1,10 +1,13 @@
 
 
-public class score {
+package camelot;
+
+public class Score {
     int goodSc;
     int evilSc;
+    String k,l;
     //constructor
-    public score() {
+    public Score() {
         this.goodSc=0;
         this.evilSc=0;
     }
@@ -22,4 +25,17 @@ public class score {
         return this.evilSc;
         
     }
+     
+     public int adde () {
+    	 this.evilSc++;
+    	 return evilSc;
+     }
+     
+     public int addg() {
+    	this.goodSc++;
+    	return goodSc;
+     }
+     
+    
+
 }
