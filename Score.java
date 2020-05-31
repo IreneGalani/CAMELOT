@@ -5,7 +5,6 @@ package camelot;
 public class Score {
     int goodSc;
     int evilSc;
-    String k,l;
     //constructor
     public Score() {
         this.goodSc=0;
