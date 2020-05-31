@@ -1,7 +1,14 @@
+package camelot;
+
 public class QuestOutcome {
 	   int fails;
 	   int completedQuests;
 	   Score score=new Score();
+	   boolean good=false;
+	   boolean evil=false;
+	  boolean lady=false; 
+	  String k;
+	   
 	 
 	   //constructor
 	   public QuestOutcome() {
@@ -20,16 +27,13 @@ public class QuestOutcome {
 	        this.completedQuests++;
 	    }
 	   
-	   public void failnumcheck(boolean lol) {
-	        if (this.fails>0) {
-	            score.adde();
-	            add();
-	            score.scorecheck(lol);
-	        } else if (this.fails==0)  {
-	            score.addg();
-	            add();
-	            score.scorecheck(lol);
-	            }
+	  
+	   
+	   public int getfails() {
+		   return fails;
+	   }
+	   public void setfails() {
+		   this.fails++;
 	   }
 	   
 	   public int checkCompleted(){
@@ -48,24 +52,4 @@ public class QuestOutcome {
 	                return 0;
 	        }
 	   }
-	public void checkfinishing(boolean lol){
-	   if (this.completedQuests<5 && score.evilSc==3) {
-	      if(lol==true){
-	       System.out.println("go on with Lady of the Lake");
-	      } else {
-	       System.out.println("evil wins"); 
-	   }
-	 } else if (this.completedQuests==5 && score.evilSc==3) {
-	      System.out.println("evil wins");
-	} else if (completedQuests<5 && score.goodSc==3) {
-	      if(lol==true){
-	       System.out.println("go on with Lady of the Lake");
-	      } else {
-	       System.out.println("time to check for merlin"); 
-	      } 
-	   } else if (completedQuests==5 && score.evilSc==3) {
-	         System.out.println("evil wins");
-	   }
-	   }
-	}
-
+}
