@@ -36,18 +36,20 @@ public class OthoniEidikoiKannones extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		bt1.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent e) {
+				if(e.getSource()==bt1){
 				dispose();
 				OthoniLolTarg a = new OthoniLolTarg();
-				//a.getbtLol();
+				}
 				
 			}
 			
 		});
 		x.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent e) {
+				if(e.getSource()==x){
 				dispose();
 				ArxikoMenuOth ab = new ArxikoMenuOth(a);
-				
+				}
 			}
 			
 		});
