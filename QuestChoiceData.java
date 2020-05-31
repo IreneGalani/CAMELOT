@@ -15,6 +15,8 @@ public class QuestChoiceData
     private int leadersChoice;// epilogh (quest/missioners) apo leader
     
     private int countQuest;// h apostolh pou briskomaste
+    private int hasVoted;
+
     
    
    
@@ -72,6 +74,15 @@ public class QuestChoiceData
 	 public int getMLen() {
 	   return  ml.length;
    }
+	public void setHasVoted(int hasVoted) {
+		this.hasVoted = hasVoted;
+	}
+	 
+	public void saveMissionersVoted(int count)
+	   {
+	       this.hasVoted = this.hasVoted + count;
+	    }
+	 
 }  
 
       
