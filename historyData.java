@@ -1,73 +1,52 @@
- 
-/**
- * Γράψτε μια περιγραφή της κλάσης historyData εδώ.
- * 
- * @author (Το όνομά σας) 
- * @version (Αριθμός έκδοσης ή ημερομηνία εδώ)
- */
-public class historyData
-{
-    
-    //metablites constructor Player
-    private String usName;
-    
-    
-    
-    //metablites anatheshs sto setHistorydata  
-    private int playerGames;
-    private int playerWins;
-    private int playerDefeats;
-    private boolean newPlayer;
-    private String username;
+package camelot1;
+
+public class historyData {
+private String usName;
     
     private String win; // winner's side, metabliti apo getWinnersSide- EndoftheGame
     //
     private String pl_side;
     
-    Player p= new Player(usName);
+    //Player p= new Player(usName);
+    private int w;
+    private int d;
     
-      
+    private int g;
+     Current_Game cg; 
    
-    public historyData(Player pl)
+    public historyData( Current_Game cg,String winner)//(String usName,String side,String w, int games,int def,int wins  )
     {
-        this.p=pl;
+    	cg.getPlayer();
+          this.usName=cg.p.getUsername();                            
+         this.g=cg.p.playerGames+1;
+         this.pl_side=cg.p.getPlayerSide();
+         this.win=winner;
+         this.d=cg.p.playerDefeats;
+         this.w=cg.p.playerWins;
         
     }
-
-    
-    public void setnewP(boolean newP){
-        this.newPlayer= p.getNewPlayer();
-    }
-    
-    
-    public void setHistoryData(String usName, String win){              
-         this.usName=p.getUsername();                            
-         this.playerGames=p.getPlayerGames()+1;
-         this.pl_side=p.getPlayerSide();
+ 
+    public void setHistoryData(String usName){              
+         
          
          if(this.pl_side==win){
-                    this.playerWins=p.getPlayerWins()+1;
+                    this.w++;
          }
          else{
-                   this.playerDefeats=p.getPlayerDefeats()+1;
+                   this.d++;
          }
                
     }
-    public int clearPLayerWins(){
-       if(win=="null"){
-       this.playerWins=0;       
-       }  
-       return playerWins;
-    }
-    public int clearPLayerDefeats(){
-       if(win=="null"){
-       this.playerDefeats=0;
-    }
-    return playerDefeats;       
-    }
+    public void ClearData(String usName){
+         this.usName=null;                            
+         this.g=0;
+         this.w=0;
+         this.d=0;
+        
+    }   
+    
+   
     public String toString(){
-    return String.format("Name: %s Side: %s PlayerGames: %d PlayerWins: %d PlayerDefeats: %d", this.usName,this.pl_side,this.playerGames,this.playerWins, this.playerDefeats);
+    return String.format("Name: %s Side: %s PlayerGames: %d PlayerWins: %d PlayerDefeats: %d", this.usName,this.pl_side,this.g,this.w, this.d);
     }
 }
-
-
