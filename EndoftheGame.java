@@ -1,10 +1,12 @@
 
+package camelot;
 
-public class EndoftheGame
+
+public class EndOfTheGame
 {
     String winnerside;
     //costructor
-    public EndoftheGame() {
+    public EndOfTheGame() {
         this.winnerside=winnerside;
     }
    public void setWinnerSide(String winsid) {
@@ -16,3 +18,4 @@ public class EndoftheGame
     }
    
 }
+
