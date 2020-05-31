@@ -3,11 +3,7 @@ package camelot;
 public class QuestOutcome {
 	   int fails;
 	   int completedQuests;
-	   Score score=new Score();
-	   boolean good=false;
-	   boolean evil=false;
-	  boolean lady=false; 
-	  String k;
+	   
 	   
 	 
 	   //constructor
