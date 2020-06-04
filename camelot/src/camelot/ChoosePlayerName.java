@@ -309,22 +309,33 @@ public class ChoosePlayerName extends JFrame {
 			JButton NextButton = new JButton("");
 			NextButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					boolean choose=false;
+					boolean ok;
 					if(p1.isSelected()) {
 						setChosenPlayer(player[0]);
+						choose=true;
 					} else if(p2.isSelected()) {
 						setChosenPlayer(player[1]);
+						choose=true;
 					} else if(p3.isSelected()) {
 						setChosenPlayer(player[2]);
+						choose=true;
 					} else if(p4.isSelected()) {
 						setChosenPlayer(player[3]);
+						choose=true;
 					} else if(p5.isSelected()){
 						setChosenPlayer(player[4]);
+						choose=true;
 					} else {
 						setChosenPlayer(player[5]);
+						choose=true;
 					}
-					boolean ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
+					if(!choose) {
+						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
+					} else {
+					 ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
 					//System.out.println(getChosenPlayer().username + " was selected!");
-					ok = false;
+					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
@@ -354,7 +365,7 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						}
-					}
+					}}
 				}
 			});
 			
@@ -405,24 +416,36 @@ public class ChoosePlayerName extends JFrame {
 			JButton NextButton = new JButton("");
 			NextButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					boolean choose=false;
+					boolean ok;
 					if(p1.isSelected()) {
 						setChosenPlayer(player[0]);
+						choose=true;
 					} else if(p2.isSelected()) {
 						setChosenPlayer(player[1]);
+						choose=true;
 					} else if(p3.isSelected()) {
 						setChosenPlayer(player[2]);
+						choose=true;
 					} else if(p4.isSelected()) {
 						setChosenPlayer(player[3]);
+						choose=true;
 					} else if(p5.isSelected()){
 						setChosenPlayer(player[4]);
+						choose=true;
 					} else if(p6.isSelected()){
 						setChosenPlayer(player[5]);
+						choose=true;
 					} else {
 						setChosenPlayer(player[6]);
+						choose=true;
 					}
-					boolean ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
+					if(!choose) {
+						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
+					} else {
+					 ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
 					//System.out.println(getChosenPlayer().username + " was selected!");
-					ok = false;
+					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
@@ -452,7 +475,7 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						}
-					}
+					}}
 				}
 			});
 			
@@ -508,24 +531,44 @@ public class ChoosePlayerName extends JFrame {
 			JButton NextButton = new JButton("");
 			NextButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					boolean choose=false;
+					boolean ok;
 					if(p1.isSelected()) {
 						setChosenPlayer(player[0]);
+						choose=true;
 					} else if(p2.isSelected()) {
 						setChosenPlayer(player[1]);
+						choose=true;
+
 					} else if(p3.isSelected()) {
 						setChosenPlayer(player[2]);
+						choose=true;
+
 					} else if(p4.isSelected()) {
 						setChosenPlayer(player[3]);
+						choose=true;
+
 					} else if(p5.isSelected()){
 						setChosenPlayer(player[4]);
+						choose=true;
+
 					} else if(p6.isSelected()){
 						setChosenPlayer(player[5]);
+						choose=true;
+
 					} else if(p7.isSelected()){
 						setChosenPlayer(player[6]);
+						choose=true;
+
 					} else {
 						setChosenPlayer(player[7]);
+						choose=true;
+
 					}
-					boolean ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
+					if(!choose) {
+						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
+					} else {
+					ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
 					//System.out.println(getChosenPlayer().username + " was selected!");
 					ok = false;
 					if(!ok) {
@@ -557,7 +600,7 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						}
-					}
+					}}
 				}
 			});
 			
@@ -618,28 +661,42 @@ public class ChoosePlayerName extends JFrame {
 			JButton NextButton = new JButton("");
 			NextButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					boolean choose=false;
+					boolean ok;
 					if(p1.isSelected()) {
 						setChosenPlayer(player[0]);
+						choose=true;
 					} else if(p2.isSelected()) {
 						setChosenPlayer(player[1]);
+						choose=true;
 					} else if(p3.isSelected()) {
 						setChosenPlayer(player[2]);
+						choose=true;
 					} else if(p4.isSelected()) {
 						setChosenPlayer(player[3]);
+						choose=true;
 					} else if(p5.isSelected()){
 						setChosenPlayer(player[4]);
+						choose=true;
 					} else if(p6.isSelected()){
 						setChosenPlayer(player[5]);
+						choose=true;
 					} else if(p7.isSelected()){
 						setChosenPlayer(player[6]);
+						choose=true;
 					} else if(p8.isSelected()){
 						setChosenPlayer(player[7]);
+						choose=true;
 					} else {
 						setChosenPlayer(player[8]);
+						choose=true;
 					}
-					boolean ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
+					if(!choose) {
+						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
+					} else {
+					ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
 					//System.out.println(getChosenPlayer().username + " was selected!");
-					ok = false;
+					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
@@ -669,7 +726,7 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						}
-					}
+					}}
 				}
 			});
 			
@@ -734,28 +791,43 @@ public class ChoosePlayerName extends JFrame {
 			JButton NextButton = new JButton("");
 			NextButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					boolean choose=false;
+					boolean ok;
 					if(p1.isSelected()) {
 						setChosenPlayer(player[0]);
+						choose=true;
 					} else if(p2.isSelected()) {
 						setChosenPlayer(player[1]);
+						choose=true;
 					} else if(p3.isSelected()) {
 						setChosenPlayer(player[2]);
+						choose=true;
 					} else if(p4.isSelected()) {
 						setChosenPlayer(player[3]);
+						choose=true;
 					} else if(p5.isSelected()){
 						setChosenPlayer(player[4]);
+						choose=true;
 					} else if(p6.isSelected()){
 						setChosenPlayer(player[5]);
+						choose=true;
 					} else if(p7.isSelected()){
 						setChosenPlayer(player[6]);
+						choose=true;
 					} else if(p8.isSelected()){
 						setChosenPlayer(player[7]);
+						choose=true;
 					} else if(p9.isSelected()){
 						setChosenPlayer(player[8]);
+						choose=true;
 					} else {
 						setChosenPlayer(player[9]);
+						choose=true;
 					}
-					boolean ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
+					if(!choose) {
+						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
+					} else {
+					ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
 					//System.out.println(getChosenPlayer().username + " was selected!");
 					//boolean ok = false;
 					//System.out.println(ok);
@@ -788,7 +860,7 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						}
-					}
+					}}
 				}
 			});
 			Image img1 = new ImageIcon(this.getClass().getResource("/next.png")).getImage();
