@@ -24,7 +24,6 @@ public class ChoosePlayerName extends JFrame {
 
 	private JPanel contentPane;
 	public Player chosenPlayer;
-	//Player[] player;
 	QuestChoiceData qd;
 	Current_Game curr;
 	Special_Rules a;
@@ -40,9 +39,6 @@ public class ChoosePlayerName extends JFrame {
 		return this.chosenPlayer;
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public ChoosePlayerName(QuestChoiceData qd, Current_Game curr, Special_Rules a,VotingData vd, QuestOutcome qo, Score scr) {
 		this.qd = qd;
 		this.curr = curr;
