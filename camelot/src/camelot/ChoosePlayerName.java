@@ -31,29 +31,6 @@ public class ChoosePlayerName extends JFrame {
 	QuestOutcome qo;
 	Score scr;
 	VotingData vd;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Player pl1 = new Player("Bill");
-					Player pl2 = new Player("Irene");
-					Player pl3 = new Player("Paul");
-					Player pl4 = new Player("Tzo");
-					Player pl5 = new Player("Mike");
-					Player[] player = {pl1, pl2, pl3, pl4, pl5};
-					
-					//ChoosePlayerName frame = new ChoosePlayerName(player);
-					//frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	public void setChosenPlayer(Player player) {
 		this.chosenPlayer = player;
@@ -224,8 +201,6 @@ public class ChoosePlayerName extends JFrame {
 					} else {
 						choose = false;
 					}
-					//ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
-					//ok = false;
 					if(!choose) {
 						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
 					} else {
@@ -233,28 +208,21 @@ public class ChoosePlayerName extends JFrame {
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-					//Role r1 = new Role("oberon"); //px
-					//getChosenPlayer().setPlayerRole(r1);
 					getChosenPlayer().checkPlayerSide();
 					String side = getChosenPlayer().getPlayerSide();
-					//String side = "good";
 					if(side == "good") {
-						//dispose();
 						for(int i = 0; i < player.length; i++) {
 							if(player[i].isLadyOfTheLake()) {
 								player[i].setNewLady();
-								//System.out.println(player[i].isLadyOfTheLake);
 								dispose();
 								WithTheGood good = new WithTheGood(getChosenPlayer(),qd,  curr, a, vd, qo, scr);
 								good.setVisible(true);
 							}
 						}
 					} else {
-						//dispose();
 						for(int i = 0; i < player.length; i++) {
 							if(player[i].isLadyOfTheLake()) {
 								player[i].setNewLady();
-								//System.out.println(player[i].isLadyOfTheLake);
 								dispose();
 								WithTheEvil evil = new WithTheEvil(getChosenPlayer(), qd, curr, a,vd, qo, scr);
 								evil.setVisible(true);
@@ -334,18 +302,12 @@ public class ChoosePlayerName extends JFrame {
 						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
 					} else {
 					 ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
-					//System.out.println(getChosenPlayer().username + " was selected!");
-					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-						Role r1 = new Role("oberon"); //px
-						getChosenPlayer().setPlayerRole(r1);
 						getChosenPlayer().checkPlayerSide();
 						String side = getChosenPlayer().getPlayerSide();
-						//String side = "good";
 						if(side == "good") {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -355,7 +317,6 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						} else {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -444,18 +405,12 @@ public class ChoosePlayerName extends JFrame {
 						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
 					} else {
 					 ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
-					//System.out.println(getChosenPlayer().username + " was selected!");
-					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-						Role r1 = new Role("oberon"); //px
-						getChosenPlayer().setPlayerRole(r1);
 						getChosenPlayer().checkPlayerSide();
 						String side = getChosenPlayer().getPlayerSide();
-						//String side = "good";
 						if(side == "good") {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -465,7 +420,6 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						} else {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -574,13 +528,9 @@ public class ChoosePlayerName extends JFrame {
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-						Role r1 = new Role("oberon"); //px
-						getChosenPlayer().setPlayerRole(r1);
 						getChosenPlayer().checkPlayerSide();
 						String side = getChosenPlayer().getPlayerSide();
-						//String side = "good";
 						if(side == "good") {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -590,7 +540,6 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						} else {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -695,18 +644,12 @@ public class ChoosePlayerName extends JFrame {
 						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
 					} else {
 					ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
-					//System.out.println(getChosenPlayer().username + " was selected!");
-					//ok = false;
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-						Role r1 = new Role("oberon"); //px
-						getChosenPlayer().setPlayerRole(r1);
 						getChosenPlayer().checkPlayerSide();
 						String side = getChosenPlayer().getPlayerSide();
-						//String side = "good";
 						if(side == "good") {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -716,7 +659,6 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						} else {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -828,19 +770,12 @@ public class ChoosePlayerName extends JFrame {
 						JOptionPane.showMessageDialog(null, "Πρέπει να επιλέξεις κάποιον παίκτη!");
 					} else {
 					ok = getChosenPlayer().validateLadysChoice(getChosenPlayer().username);
-					//System.out.println(getChosenPlayer().username + " was selected!");
-					//boolean ok = false;
-					//System.out.println(ok);
 					if(!ok) {
 						JOptionPane.showMessageDialog(null, "Επίλεξε άλλον παίκτη!");
 					} else {
-						Role r1 = new Role("oberon"); //px
-						getChosenPlayer().setPlayerRole(r1);
 						getChosenPlayer().checkPlayerSide();
 						String side = getChosenPlayer().getPlayerSide();
-						//String side = "good";
 						if(side == "good") {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
@@ -850,7 +785,6 @@ public class ChoosePlayerName extends JFrame {
 								}
 							}
 						} else {
-							//dispose();
 							for(int i = 0; i < player.length; i++) {
 								if(player[i].isLadyOfTheLake()) {
 									player[i].setNewLady();
