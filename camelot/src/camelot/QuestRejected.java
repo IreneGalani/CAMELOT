@@ -51,6 +51,17 @@ public class QuestRejected extends JFrame {
 				//System.out.println(failures);
 				if((failures >0 && failures < 5)) {
 				int quest = qd.getCount();
+				if(qd.getQuest() ==1) {
+					curr.setQb1(true);
+				} else if(qd.getQuest() == 2) {
+					curr.setQb2(true);
+				}  else if(qd.getQuest() == 3) {
+					curr.setQb3(true);
+				}  else if(qd.getQuest() == 4) {
+					curr.setQb4(true);
+				} else {
+					curr.setQb5(true);
+				}
 				QuestChoiceData qd = new QuestChoiceData(); 
 				if(quest ==1) {
 					qd.setCountQuest(1);
