@@ -3,6 +3,7 @@ public class QuestChoiceData
     private int missioners;
     private int countQuest;// h apostolh pou briskomaste
     private int hasVoted;
+	public int quest;
     public String[] ml= new String [missioners] ;
 
    public QuestChoiceData()
@@ -22,6 +23,12 @@ public class QuestChoiceData
 		return hasVoted;
 	}
     
+	public void setQuest(int q) {
+    	this.quest=q;
+    }
+    public int getQuest() {
+    	return this.quest;
+    }
   public void stMissioners(int k){
        
           this.missioners =k;
