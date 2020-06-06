@@ -236,19 +236,24 @@ public class ChooseQuest extends JFrame {
 		 	}else {
 		 		if (rb1.isSelected()) {
 		 		curr.setQb1(false);
+		 		qd.setQuest(1);
 		 		rb1.setEnabled(false);
 		 	}else if(rb2.isSelected()) {
 		 		curr.setQb2(false);
 		 		rb2.setEnabled(false);
+		 		qd.setQuest(2);
 		 	}else if(rb3.isSelected()) {
 		 		curr.setQb3(false);
+		 		qd.setQuest(3);
 		 		rb3.setEnabled(false);
 		 	}else if(rb4.isSelected()) {
 		 		curr.setQb4(false);
 		 		rb4.setEnabled(false);
+		 		qd.setQuest(4);
 		 	}else if(rb5.isSelected()) {
 		 		curr.setQb5(false);
 		 		rb5.setEnabled(false);
+		 		qd.setQuest(5);
 		 	}
 			ChooseMissioners m = new ChooseMissioners(qd,curr,a,vd,qo,scr);						
             dispose();
