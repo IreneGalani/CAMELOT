@@ -58,8 +58,7 @@ public class ArxikoMenuOth extends JFrame {
 				});
 				b1.addActionListener(new ActionListener(){
 					public void actionPerformed (ActionEvent e) {
-						dispose();
-						//OthoniEidikoiKannones a = new OthoniEidikoiKannones();
+						
 						}
 					});
 				b3.addActionListener(new ActionListener(){
